@@ -1,0 +1,20 @@
+.images{
+    position: relative;
+    display: inline-flex; /*inline-flex становит элементы в ряд*/
+	margin: 0;
+    font-size: 0;
+    left: 0; /*top changed to left*/
+	transition: left 2s; /*top changed to left*/
+}
+.slider{
+	width: 800px;
+	height: 480px;
+	overflow: hidden;
+}
+
+nav{
+	position: fixed;
+	top: 0; 
+	left: 0;
+	z-index: 1000;
+}

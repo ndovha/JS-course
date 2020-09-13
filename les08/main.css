@@ -1,0 +1,13 @@
+#container {
+    height: 600px;
+    width: 600px;
+    background-color: white;
+    
+}
+
+div.box {
+    height: 60px;
+    width: 60px;
+    display: inline-flex;
+    
+}
