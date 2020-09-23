@@ -1,0 +1,136 @@
+body {
+    width: auto;
+}
+
+.container {
+    width: 400px;
+    height: 690px;
+    padding: 10px;
+    margin:0 auto;
+}
+
+.header {
+    width: 400px;
+    height: 160px;
+    background-color: rgba(224, 236, 240, 0.7);
+    margin:0 auto;
+}
+.clear{
+    padding-top: 10px;
+    margin-left: 370px; 
+}
+
+.filter1{
+    margin-left: 370px; 
+    padding-top: 25px;
+    height: 10px;
+    cursor: pointer;
+}
+
+.filter2{
+    margin-left: 370px; 
+    padding-top: 25px;
+    height: 10px;
+    cursor: pointer;
+}
+
+.clear i:hover{
+    cursor: pointer;
+    transform: rotate(45deg);  
+}
+
+.fa-spin-hover:hover {
+    animation: fa-spin 2s infinite linear;
+}
+
+#date {
+    font-size: 30px;
+    padding-top: 15px;
+    padding-left: 5px;
+}
+.content{
+    width:400px;
+    height: 450px;
+    max-height:450px;
+    background-color: #FFF;
+    overflow: auto;
+    margin:0 auto;
+}
+.content::-webkit-scrollbar { 
+    display: none; 
+}
+.content ul{
+    padding:0;
+    margin:0;
+}
+.items{
+    width:400px;
+    height: 45px;
+    min-height: 45px;
+    position: relative;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.items i.co{
+    position: absolute;
+    font-size: 25px;
+    padding-left:5px;
+    left:15px;
+    top:10px;
+}
+.items i.co:hover{
+    cursor: pointer;
+}
+.fa-check-circle{
+    color:#6eb200;
+}
+
+.items p.text{
+    position: absolute;
+    padding:0;
+    margin:0;
+    font-size: 20px;
+    left:50px;
+    top:5px;
+    background-color: #FFF;
+    max-width:285px;
+}
+
+.lineThrough{
+    text-decoration: line-through;
+    color : #ccc;
+}
+.items i.de{
+    position: absolute;
+    font-size: 25px;
+    right:15px;
+    top:10px;
+    cursor: pointer;
+}
+
+i.c{
+    cursor: pointer;
+    font-size: 35px;
+    padding-left:5px;
+    
+    
+}
+.add-items{
+    width: 400px;
+    height: 40px;
+    background-color: rgba(224, 236, 240, 0.7);
+    margin:0 auto;
+}
+
+#input{
+    font-size: 27px;
+    left:50px;
+    top:5px;
+    background-color: #FFF;
+    
+}
+
+
+
