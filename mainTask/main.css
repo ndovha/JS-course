@@ -1,5 +1,7 @@
+
 body {
     width: auto;
+    font-family: 'Kumbh Sans', sans-serif;
 }
 
 .container {
@@ -7,29 +9,30 @@ body {
     height: 690px;
     padding: 10px;
     margin:0 auto;
+    /* font-family: Georgia; */
 }
 
 .header {
     width: 400px;
-    height: 160px;
+    height: 150px;
     background-color: rgba(224, 236, 240, 0.7);
     margin:0 auto;
 }
 .clear{
-    padding-top: 10px;
-    margin-left: 370px; 
+    padding-top: 15px;
+    margin-left: 375px; 
 }
 
 .filter1{
-    margin-left: 370px; 
-    padding-top: 25px;
+    margin-left: 380px; 
+    padding-top: 15px;
     height: 10px;
     cursor: pointer;
 }
 
 .filter2{
-    margin-left: 370px; 
-    padding-top: 25px;
+    margin-left: 380px; 
+    padding-top: 20px;
     height: 10px;
     cursor: pointer;
 }
@@ -45,8 +48,8 @@ body {
 
 #date {
     font-size: 30px;
-    padding-top: 15px;
-    padding-left: 5px;
+    padding-top: 20px;
+    padding-left: 15px;
 }
 .content{
     width:400px;
@@ -96,6 +99,7 @@ body {
     top:5px;
     background-color: #FFF;
     max-width:285px;
+    line-height: 35px;
 }
 
 .lineThrough{
@@ -112,25 +116,24 @@ body {
 
 i.c{
     cursor: pointer;
-    font-size: 35px;
-    padding-left:5px;
-    
-    
+    font-size: 37px; 
+    padding-left: 358px;
 }
 .add-items{
     width: 400px;
     height: 40px;
     background-color: rgba(224, 236, 240, 0.7);
     margin:0 auto;
+    font-size: 30px;
 }
 
 #input{
-    font-size: 27px;
-    left:50px;
-    top:5px;
+    font-size: 29px;
     background-color: #FFF;
-    
+    font-family: 'Kumbh Sans', sans-serif;
+    position: absolute;
 }
+
 
 
 

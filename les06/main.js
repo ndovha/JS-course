@@ -39,7 +39,7 @@ function theLoop(arr,i) {
       } else {
         alert('Заполнение завершено');
       }
-    }, 1000);
+    }, 500);
   };
 theLoop(random_array(),0)
 

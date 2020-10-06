@@ -1,40 +1,45 @@
 
-
-// for(let i=1; i< 7;i++)
-// {
-// image.innerHTML('<li><a href="image' + i + '.jpeg"><img src="image' + i + '.jpeg" ></a></li>');
-// }
-// let image = document.createElement('img')
+const im = [
+    'image/1.jpg',
+     'image/2.jpg', 
+     'image/3.jpg', 
+     'image/4.jpg',
+      'image/5.jpg',
+      'image/6.jpg']
+// for(let i = 0; i < im.length; i++) {
+//     let image = document.createElement('img')
 //     image.setAttribute('class', 'images')
-
 //     document.body.appendChild(image);
-//     let im = ['image/1.jpg', 'image/2.jpg', 'image/3.jpg', 'image/4.jpg', 'image/5.jpg', 'image/6.jpg']
-//    console.log(im) 
-//     for(let i = 0; i < im.length; i++) {
-//         image.src = im[i];
-//         if(i < 7) break;
-//     }
-
-let im = ['image/1.jpg', 'image/2.jpg', 'image/3.jpg', 'image/4.jpg', 'image/5.jpg', 'image/6.jpg']
-for(let i = 0; i < im.length; i++) {
-    let image = document.createElement('img')
-    image.setAttribute('class', 'images')
-    document.body.appendChild(image);
-    image.src = im[i];
-}
-    
-
-
-// function loadImages(i){
-//       i = i || 1;
-//  image.onload = function(){
-//          loadImages(++i) 
-//          if(i == 6) {
-//             return;
-//         } 
-//     }
-//     // image.setAttribute('src', 'image/'+ i +'.jpg')
-    
+//     image.src = im[i];
 // }
+    
+const dom = {
+	btnNext : document.querySelector('.btn-next'),
+	btnPrev	: document.querySelector('.btn-prev'),
+	imgContainer : document.querySelector('.images'),
+	cur : 0,
+	imgWidth : 1280 
+};
 
-// loadImages();
+dom.imgContainer.innerHTML = im.map(url=>`<img src="${url}" alt="slider image">`).join('');
+
+dom.btnNext.addEventListener('click',()=>changeImage());
+dom.btnPrev.addEventListener('click',()=>changeImage('prev'));
+
+function changeImage(dir = 'next'){
+	if(dir == 'next'){
+		dom.cur++;
+		if(dom.cur >= im.length){
+			dom.cur = 0;
+		}
+	}else{
+		dom.cur--;
+		if(dom.cur < 0){
+			dom.cur = im.length - 1;
+		}
+	}	
+	
+	dom.imgContainer.style.left = -1 * dom.imgWidth * dom.cur + 'px'; 
+	dom.btnNext.innerText = `${dom.cur + 1}: Next`;
+	dom.btnPrev.innerText = `${dom.cur + 1}: Prev`;
+}

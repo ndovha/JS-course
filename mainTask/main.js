@@ -16,7 +16,7 @@ const check = 'fa-check-circle';
 const uncheck = 'fa-circle-thin';
 const line_through = 'lineThrough';
 
-let List = [];
+let arList = [];
 let id = 0;
 
 
@@ -45,7 +45,7 @@ document.getElementById('add').addEventListener('click', function() {
         const toDo = input.value
          if(toDo) { //check if input isn't empty
             addtoDo(toDo, id, false, false, false);
-            List.push({ //push item to let List = []
+            arList.push({ //push item to let List = []
                name: toDo,
                id: id,
                done: false,
@@ -53,7 +53,7 @@ document.getElementById('add').addEventListener('click', function() {
                hidden: false
          
            });
-           localStorage.setItem('TODO', JSON.stringify(List));
+           localStorage.setItem('TODO', JSON.stringify(arList));
             id++; //for next item
         }
         input.value = ''; //Empty input
@@ -63,11 +63,11 @@ document.getElementById('add').addEventListener('click', function() {
 // localStorage
 let data = localStorage.getItem('TODO');
 if(data){
-   List = JSON.parse(data);
-   id = List.length;
-   loadList(List)
+   arList = JSON.parse(data);
+   id = arList.length;
+   loadList(arList)
 } else{
-   List = [];
+   arList = [];
    id = 0;
 }
 function loadList(array) {
@@ -81,14 +81,14 @@ function completetoDo(element) {
    element.classList.toggle(check);
    element.classList.toggle(uncheck);
    element.parentNode.querySelector('.text').classList.toggle(line_through);
-   List[element.id].done = List[element.id].done ? false : true;
+   arList[element.id].done = arList[element.id].done ? false : true;
 }
 
 // Delete
 
 function deletetoDo(element) {
   element.parentNode.parentNode.removeChild(element.parentNode);
-  List[element.id].trash = true;
+  arList[element.id].trash = true;
 }
 
 list.addEventListener('click', function(event) {
@@ -100,7 +100,7 @@ list.addEventListener('click', function(event) {
    } else if(element.attributes.job.value == 'delete') {
       deletetoDo(element);
    }    
-   localStorage.setItem('TODO', JSON.stringify(List));
+   localStorage.setItem('TODO', JSON.stringify(arList));
  });
 
 
@@ -114,25 +114,25 @@ clear.addEventListener('click', function () {
 // filter
 function hiddenToDo(element) {
       element.parentNode.parentNode.removeChild(element.parentNode);
-      List[element.id].hidden = true;
+      arList[element.id].hidden = true;
    }
 filter1.addEventListener('click', function(event) {
-   console.log(List)
+   console.log(arList)
    let element = document.querySelectorAll('.fa-check-circle');
    element.forEach((item) => {
       hiddenToDo(item);
   }) 
-  localStorage.setItem('TODO', JSON.stringify(List));
+  localStorage.setItem('TODO', JSON.stringify(arList));
 })
 
 filter2.addEventListener('click', function(event) {
-  List.forEach((item) => {
+  arList.forEach((item) => {
    if (item.hidden){
-      List[item.id].hidden = false;
+      arList[item.id].hidden = false;
       addtoDo(item.name, item.id, item.done, item.trash, false);
    }
 })
-localStorage.setItem('TODO', JSON.stringify(List));
+localStorage.setItem('TODO', JSON.stringify(arList));
 })
 
 // date

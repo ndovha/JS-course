@@ -17,7 +17,7 @@ function  Duplicate(elem) {
 
 console.log(Duplicate('Indivisibilities'));
 
-Task 2
+// Task 2
 let DNA_strand = 'ATTGC';
 let element = ['A', 'T', 'G', 'C'];
 let resultArray = [];
@@ -41,7 +41,7 @@ for(let i = 0; i < DNA_strand.length; i++) {
 }
 console.log(resultArray.join(''));
 
-Task 3
+// Task 3
 let phrase = 'bitcoin take over the world maybe who knows perhaps';
 let words = phrase.split(' ');
 
@@ -52,10 +52,10 @@ let min = words.reduce(function(a, b) {
   });
 console.log(min.length);
 
-Task 4
+// Task 4
 let phraseNum = '4of Fo1r pe6ople g3ood th5e the2';
-let words = phraseNum.split(' ');
-let sort = words.sort(
+let phrases = phraseNum.split(' ');
+let sort = phrases.sort(
     function(a, b){
     return +a[a.search(/[0-9]/)] - +b[b.search(/[0-9]/)]
     });

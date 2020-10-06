@@ -140,25 +140,8 @@ if(p.length == 5 && p[0] === p[4] && p[1] === p[3]) {
     alert('false')
 };
 
-// 6 ------
-// let element = document.getElementById('USD');
-// let element2 = document.getElementById('currency');
-// // let element3 = document.getElementById('Submit');
 
-// const EUR = 0.84;
-// const UAH = 27;
-// const GBP = 0.76;
-
-// if(element2 == 'EUR') {
-//     alert(element * EUR)
-// } else if(element2 == 'UAH') {
-//     alert(element * UAH)
-// } else if(element2 == 'GBP') {
-//     alert(element * GBP)
-// }
-
-
-// 7
+// 6
 const sum = +prompt('Purchase amount');
 
 if(sum >= 200 && sum < 300) {
@@ -172,13 +155,13 @@ if(sum >= 200 && sum < 300) {
     alert(`Price 7%: ${sum - result}`)
 };
 
-// 8
+// 7
 const circle = prompt('circumference');
 const square = prompt('perimeter square');
 
 circle <= square ? alert('Yes') : alert('No');
 
-// 9
+// 8
 const q1 = prompt('Сколько будет 2+2: 1) 5; 2) 4; 3) 3 ?');
 const q2 = prompt('Столица Украины: 1) Киев; 2)Харьков; 3) Днепр ?');
 const q3 = prompt('Числа Пи равно: 1) 7; 2)2.14; 3)3.14');
@@ -213,15 +196,7 @@ if(q1 == 4 && q2 == 'Киев' && q3 == 3.14) {
     alert(0)
 );
 
-// 10 ????
 
-// function nextDay() {
-//     let tomorrow = new Date();
-//     tomorrow.setDate(tomorrow.getDate() + 1);
-//     return tomorrow.getDate();
-//   }
-  
-//   alert(nextDay())
 
 
 
