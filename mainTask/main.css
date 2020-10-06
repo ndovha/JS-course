@@ -55,7 +55,7 @@ body {
     width:400px;
     height: 450px;
     max-height:450px;
-    background-color: #FFF;
+    background-color: rgba(171, 220, 236, 0.7);
     overflow: auto;
     margin:0 auto;
 }
@@ -97,14 +97,14 @@ body {
     font-size: 20px;
     left:50px;
     top:5px;
-    background-color: #FFF;
+    background-color: rgba(171, 220, 236, 0.7);
     max-width:285px;
     line-height: 35px;
 }
 
 .lineThrough{
     text-decoration: line-through;
-    color : #ccc;
+    color : rgb(218, 100, 100);
 }
 .items i.de{
     position: absolute;
@@ -124,14 +124,18 @@ i.c{
     height: 40px;
     background-color: rgba(224, 236, 240, 0.7);
     margin:0 auto;
-    font-size: 30px;
+    font-size: 35px;
 }
 
 #input{
     font-size: 29px;
-    background-color: #FFF;
+    background-color: rgba(224, 236, 240, 0.5);
     font-family: 'Kumbh Sans', sans-serif;
     position: absolute;
+}
+input::-webkit-input-placeholder{
+    font-style: italic;
+    font-size: 20px;
 }
 
 
